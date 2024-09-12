@@ -1,9 +1,8 @@
 <div class="container">
   <input class="input" type="text" placeholder="Adicione um item à lista" [(ngModel)]="value"
-  [disabled]="!value"  
-  (keyup.enter)="addItem()" />
+    (keyup.enter)="addItem()" />
 
-  <button class="botao-adicionar" (click)="addItem()">Adicionar</button>
+  <button class="botao-adicionar" [disabled]="!value" (click)="addItem()">Adicionar</button>
   <ul>
     <li *ngFor="let item of recebe">
       {{ item }}
