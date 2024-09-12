@@ -1,6 +1,7 @@
 <div class="container">
   <input class="input" type="text" placeholder="Adicione um item à lista" [(ngModel)]="value"
-    (keyup.enter)="addItem()" />
+  [disabled]="!value"  
+  (keyup.enter)="addItem()" />
 
   <button class="botao-adicionar" (click)="addItem()">Adicionar</button>
   <ul>
